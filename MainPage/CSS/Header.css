@@ -1,8 +1,7 @@
+/* Contains Header and setup for body */
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
-
 body{
-    margin: 0;
-    margin-top: -25px;
+    margin: -20px 0;
     font-size: 1em;
     background: rgb(35, 35, 35);
     font-family: Tahoma;
@@ -15,32 +14,40 @@ body{
 
 header {
     background: rgb(15, 15, 15);
-    color: white;
+    color: orange;
 }
 
-#IntroHead {
-    padding: 2%;
-    margin-bottom: -20px;
+.IntroHead{
+    height: 85vh;
+    width: 100vw;
+    padding-block: 20px;
+
+    font-size: 150%;
 }
+    .IntroHead > p {
+        text-align: center;
+        padding-inline: 30px;
+    }
+
 
 .StickyHeader {
-    top: 0;
     position: sticky;
-}
+    top: 0;
 
-ul#PageNav {
-    list-style: none;
     display: flex;
-    width: max-content;
-    padding-block: 2em;
+    justify-content: center;
+    height: 10vh;
+    padding: 1vh;
+    width: 100%;
 }
-    ul#PageNav > li {
-        font-size: 2.5em;
+    .StickyHeader > a {
+        font-size: 2em;
         font-family: 'Tilt Neon', cursive;
-        
+        height: fit-content;
+
         padding: .3em;
         padding-inline: 1em;
-        margin-inline: 2em;
+        margin-inline: .5em;
 
         color: var(--NeonColour);
         border: solid 0.2em var(--NeonColour);
@@ -50,8 +57,8 @@ ul#PageNav {
             0 0 0.25em;
         text-shadow: 0 0 0.3em;
     }
-    ul#PageNav > li:hover,
-    ul#PageNav > li:focus{
+    .StickyHeader > a:hover,
+    .StickyHeader > a:focus{
         color: var(--NeonColourAfter);
         border-color: var(--NeonColourAfter);
         box-shadow: 
@@ -63,6 +70,7 @@ ul#PageNav {
 
 h1 {
     text-transform: uppercase;
+    text-align: center;
 }
 
 abbr {
