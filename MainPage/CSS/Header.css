@@ -27,9 +27,15 @@ header {
     display: block;
 
     font-size:larger;
+    padding-block: 20px;
+    
+    position: relative;
+    overflow: hidden;
+    
+    font-size: 3vh;
 
     background: 
-    linear-gradient(to top, rgb(15, 15, 15), rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+    linear-gradient(to top, rgb(15, 15, 15), rgba(0, 0, 0, 0));
 }
     .IntroHead > h1 {
         padding-top: 13vh;
@@ -37,6 +43,15 @@ header {
     .IntroHead > p {
         text-align: center;
         padding-inline: 30px;
+    }
+    .IntroHead > img {
+        position: absolute;
+        top: 0;
+        
+        min-width: 100vw;
+        height: auto;
+        z-index: -1;
+        filter: blur(50);
     }
 
 .StickyHeader {
@@ -84,8 +99,10 @@ header {
 h1 {
     text-transform: uppercase;
     text-align: center;
+    margin-top: 75px;
 }
 
 abbr {
     text-decoration: none;
 }
+
