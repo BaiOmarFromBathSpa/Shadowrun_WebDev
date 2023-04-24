@@ -36,7 +36,7 @@ body{
         top: 0;
 
         min-width: 100vw;
-        min-height: auto;
+        aspect-ratio: 16/9;
         z-index: -1;
     } 
 
