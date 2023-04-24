@@ -16,64 +16,54 @@ body{
     --NeonColourAfter: Aqua;
 }
 
-header {
-    background: rgb(15, 15, 15);
-    color: orange;
-}
-
-.IntroHead{
-    height: 85vh;
-    width: 100vw;
-    display: block;
-
-    font-size:larger;
-    padding-block: 20px;
-    
+.IntroHead {
     position: relative;
-    overflow: hidden;
-    
-    font-size: 3vh;
+    height: 100vh;
 
-    background: 
-    linear-gradient(to top, rgb(15, 15, 15), rgba(0, 0, 0, 0));
+    color: orange;
+    background:
+    linear-gradient(to top, rgb(10, 10, 10), rgb(10, 10, 10) 10%, rgba(0, 0, 0, 0));
+    padding-inline: 10vw;
+
+    font-size: larger;
+    text-align: center;
+
+    overflow: hidden;
 }
-    .IntroHead > h1 {
-        padding-top: 13vh;
-    }
-    .IntroHead > p {
-        text-align: center;
-        padding-inline: 30px;
-    }
     .IntroHead > img {
         position: absolute;
+        left: 0;
         top: 0;
-        
+
         min-width: 100vw;
-        height: auto;
+        min-height: auto;
         z-index: -1;
-        filter: blur(50);
-    }
+    } 
 
 .StickyHeader {
-    position: sticky;
-    top: 0;
+    display: inline-flex;
+    position: absolute;
+    bottom: 2vh;
+    left: 0;
 
-    display: flex;
-    justify-content: center;
-    height: 10vh;
-    padding-bottom: 2vh;
     width: 100%;
+    justify-content: center;
 }
     .StickyHeader > a {
+        color: var(--NeonColour);
         font-size: 2rem;
         font-family: 'Tilt Neon', cursive;
+        
+        display: block;
+        position: sticky;
+        top: 0;
+        
         height: fit-content;
 
         padding: .3rem;
         padding-inline: 1rem;
         margin-inline: .5rem;
 
-        color: var(--NeonColour);
         border: solid 0.2rem var(--NeonColour);
         border-radius: 0.5rem;
         box-shadow: 
@@ -96,10 +86,11 @@ header {
         border-color: var(--NeonColourAfter);
     }
 
+
 h1 {
     text-transform: uppercase;
     text-align: center;
-    margin-top: 75px;
+    padding-top: 20vh;
 }
 
 abbr {
