@@ -14,14 +14,14 @@ body{
     overflow-x: hidden;
 
     --NeonColour: orange;
-    --NeonColourAfter: Aqua;
+    --NeonColourAfter: aqua;
 }
 
 .IntroHeader {
     display: block;
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 85vh;
 
     text-align: center;
 
@@ -54,17 +54,19 @@ body{
 
 #StickyHeader {
     display: inline-flex;
-    position: absolute;
-    bottom: 2vh;
-    left: 0;
+    position: sticky;
+    top: 0;
     
-    font-size: 4vh;
-    gap: 6vh;
+    font-size: 2.5vw;
+    gap: 4vw;
 
     width: 100%;
+    height: 15vh;
     justify-content: center;
+    place-items: center;
 
     background: rgb(10, 10, 10);
+    isolation: isolate;
 }
     #StickyHeader > a {        
         color: var(--NeonColour);
@@ -74,7 +76,8 @@ body{
         position: sticky;
         top: 0;
 
-        padding: .7vh;
+        height: 5vh;
+        padding: 1vh;
         padding-inline: 5vh;
 
         border: solid .5vh var(--NeonColour);
@@ -94,3 +97,16 @@ body{
         text-shadow: 0 0 3vh;
         transform: translateY(-0.1rem);
     }
+#StickyHeader::before{
+    content: '';
+    position: absolute;
+
+    width: inherit;
+    height: 5vh;
+    bottom: -0.65vh;
+    background: inherit;
+
+    z-index: -1;
+    transform: skewY(.4deg);
+
+}
