@@ -42,16 +42,101 @@
         </section>
         
         <div id="InPageNav">
-            <button id="btnDragons" class="InPageNavSel">Dracoforms</button><!--Couldnt get nth-child to work :|-->
-            <button id="btnRaces">Races</button>
-            <button id="btnMatrix">The Matrix</button> 
-            <button id="btnShadowrunners">Shadowrunners</button>
-            <button id="btnMegaCorps">Mega-Corps</button>
-            <button id="btnMisc">Misc</button>
+            <button id="btnDragons" class="IPNbtn InPageNavSel" onclick="SwitchDesc('Dragons')">Dracoforms</button><!--Couldnt get nth-child to work :|-->
+            <button id="btnRaces" class="IPNbtn" onclick="SwitchDesc('Races')">Races</button>
+            <button id="btnMatrix" class="IPNbtn" onclick="SwitchDesc('Matrix')">The Matrix</button> 
+            <button id="btnShadowrunners" class="IPNbtn" onclick="SwitchDesc('Shadowrunners')">Shadowrunners</button>
+            <button id="btnMegaCorps" class="IPNbtn" onclick="SwitchDesc('MegaCorps')">Mega-Corps</button>
+            <button id="btnMisc" class="IPNbtn" onclick="SwitchDesc('Misc')">Misc</button>
         </div>
 
-        <div id="Dragons" class="MK_Descriptions">
+        <div id="Dragons" class="MK_Desc">
             <h2>Dracoforms</h2>
+            <p>Dracoforms, also known as Dragons are the various forms of large saurian creatures of tremendous intellect and magical power. What little we know of these great mythical beasts comes from the great dragon Dunkelzahn, whose famous 12-hour interview on January 27th, 2012 answered most of the world’s questions about dragons, the Awakening and magic in general. Dunkelzahn, however, was an enigma among dragons. Whereas most dragons are solitary creatures, more apt to see people and companies as ways to increase their wealth and/or power, the Big D was always in the public spotlight and led metahumanity through the dark years when magic first returned. Most dragons can take on a human form in order to fit into modern society.</p>
+            <ul>
+                <li>Eastern Dragons</li>
+                <li>Feathered Serpents</li>
+                <li>Western Dragons</li>
+                <li>Leviathans</li>
+            </ul>
+            <h3>Great Dragons</h3>
+            <p>Great Dragons are larger, stronger, more intelligent, and more magically powerful then their normal dracoform counterparts. They are capable of transforming in to metahuman form at will and the ability to twist fate itself (in game terms they're able to counter act edge). It is currently unknown if all dragons will become great dragons as a natural part of their life cycle, but as what little details are known when Masaru became a great dragon, there is a noticeable physical change to the dragon after the process occurs. The life cycle of dracoforms does seem to require great dragons, as great dragons are needed to raise dragon eggs. It does not matter who gave birth to the eggs, as for if the eggs stay under the care of a great dragon, the whelps that hatch will be the type of the great dragon. This is why the Sea Dragon worked for years to get her eggs back from Rhonabwy, as she did not want them to become western dragons.</p>
+        </div>
+        
+        <div id="Races" class="MK_Desc">
+            <h2>Races</h2>
+            <p>Characters in Shadowrun can be humans, orks, trolls, elves and dwarves, as well as certain diverging subspecies (known as metavariants) such as gnomes, giants, minotaurs, etc. As magic returned to the world, Humans began to give birth to infants of these races, a phenomenon called Unexplained Genetic Expression, or "UGE" in 2011. Then in 2021, some juvenile and adult humans "goblinized" into other races (mostly orks, but also some trolls). The term metahuman is used either to refer to humanity as a whole, including all races, or to refer specifically to non-human races, depending on context. With the return of Haley's Comet, new human variants called "changelings" arose. While not as many people were affected by this change as the previous "Goblinizations", it was enough to spark new controversy in the Awakened World, especially since changelings were frequently regarded as mutants or freaks due to the large variety of exotic traits they show.</p>
+            <p>Two of the metahuman races have fictional languages. Many elves speak Sperethiel, which some of them—being immortal—remember from the last age of magic. Some orks speak Or'zet, which was forgotten until the will of an assassinated dragon released The Or’zet Codex to the public.</p>
+            <p>Additionally, a virus known as HMHVV (Human Meta-Human Vampiric Virus) with many variant strains has been known to cause further change, frequently resulting in Bandersnatches, Banshees, Dzoo-noo-quas, Goblins, Ghouls, Nosferatus, Vampires, Wendigos, Wild Fomorians, and other fierce abominations that are no longer human and sometimes no longer even sentient.</p>
+        </div>
+
+        <div id="Matrix" class="MK_Desc">
+            <h2>Matrix</h2>
+            <p>The Matrix is the term the worldwide computer network is called in the Shadowrun setting. It was created after the Crash of 2029 which destroyed the old internet, as a completely Virtual Reality, icon and graphics -based network, because this was the only way the sheer amount of data traffic could be handled.</p>
+            <p>Cybertechnology eradicated the last vestiges of the computer virus and replaced the old telecommunications network with that become known as the Matrix.</p>
+            <p>The entire Matrix is composed of various Host Systems. People interact with this Matrix by using cyberterminals or cyberdecks.</p>
+            <h3>The Birth and Death of the Internet</h3>
+            <p>The Internet started pre-1980s with ARPAnet and NSFnet and the creation of TCI/IP for military and academic communication.</p>
+            <p>In the 1990s the World Wide Web is created. At this time the Electronic Frontier Foundation (EFF) is formed to attempt to keep the internet free from government and corporate control.</p>
+            <p>In 2018 Dr. Hosato Hikita creates ASIST technology to make simsense virtual reality a reality.</p>
+            <p>In 2022 the The Internetwork Transmission Control Council (ITCC) is formed from the remains of the FCC to regulate communications which include the internet.</p>
+            <p>In 2024 the first U.S. Presidential Election is held over the Internet.</p>
+            <p>Between 2026 and 2029 cyberterminal technology which allows users to interface with networks using the central nervous system are prototyped. These early prototypes use a sensory deprivation tank, restraints to prevent the user from hurting themselves, and a room size computer.</p>
+            <p>In 2028 Echo Mirage is formed by the US government to create elite "cyber commandos" using cyberterminal technology.</p>
+            <p>On February 8, 2029, the first Matrix Crash happens. Echo Mirage is called in to action to defeat the Crash Virus. Half of the team was killed in the first encounter with the virus, with more casualties after.</p>
+            <p>On March 1, 2029, Major David Gavilan rebuild Echo Mirage reaching out into the private sector to find gifted students, hackers, and eccentric scientists to comprise the new team. They spent 5 months training and making new technology to combat the virus.</p>
+            <p>They engaged the Crash Virus on August 30. Four members died within 20 minutes of the first encounter however they were successful at damaging the virus.</p>
+            <p>They were able to completely wipe out the last traces of the virus by November 8, 2031. Only seven members survived.</p>
+        </div>
+
+        <div id="Shadowrunners" class="MK_Desc">
+            <h2>Shadowrunners</h2>
+            <p>When the Megacorps want something done but they don't want to dirty their hands, it's a Shadowrunner they need, and they come to them. Their existence is not acknowledged by any governmental or corporate database, the demand for their services is high.</p>
+            <p>Shadowrunners are the elite criminals of the Sixth World. When conflicts arise that cannot be solved by legal means, the corporations, governments, wealthy individuals, and even organized crime will subcontract their dirty work to deniable specialists.</p>
+            <p>Shadowrunners fall outside the structured corporate world. Many are outcasts, having risen from the streets or fallen from corporate or government strata. Their ranks include idealists and pragmatists, professionals and amateurs, disillusioned ex-corp/government/military personnel who have thrown off the shackles of structured society to achieve freedom, and those who have never known any life outside the shadows. The one thing they have in common is that through necessity or by choice, they work in the shadows cast by megalithic corporate buildings.</p>
+            <h3>Runner Types</h3>
+            <ul>
+                <li>Street Samurai: Technologically-enhanced physical combat specialist. An enforcer for hire whose combat skills and reflexes make them the ultimate urban predator.</li>
+                <li>Adept: Magically-enhanced physical combat specialist.</li>
+                <li>Decker: Technologically-enhanced electronic warfare specialist.</li>
+                <li>Technomancer: Magically-enhanced electronic warfare specialist. Sliding like a whisper through the databases of giant corporations, spiriting away the only thing of real value -information.</li>
+                <li>Rigger: Vehicle/drone control specialist.</li>
+                <li>Face: Social warfare specialist.</li>
+                <li>Mage: Hermetic Magic specialist. One with an ancient gift, the ability to wield and shape the magical energies that now surround the Earth.</li>
+                <li>Shaman: Shamanic Magic specialist.</li>
+                <li>Investigator: Stealth focused specialist.</li>
+            </ul>
+        </div>
+        <div id="MegaCorps" class="MK_Desc">
+            <h2>Mega-Corporarions</h2>
+            <p>The monolithic "enemies" of the Shadowrun world (borrowing heavily from cyberpunk mythos) are the Corporations, dubbed "Megacorporations", "Megacorps", or simply "megas" or "corps" for short. Megacorporations in the 21st century are massively global, with all but the smallest corps owning multiple subsidiaries and divisions around the world. They are the superpowers of the Shadowrun universe, with the largest corporations having far more political, economic, and military power than even the most powerful nation-states.</p>
+            <p>In Shadowrun, corporations are effectively "ranked" by the amount of assets under their control, including materiel, personnel, and property, as well as profit. These ranks are A, AA, and AAA; AAA corporations are top tier. Most corporations in the AA and AAA level are immune to domestic law, responsible only to themselves, and regulated only by the Corporate Court, an assembly of the ten AAA-rated corporations.</p>
+            <p>All AAA-rated and most AA-rated corporations also exhibit a privilege known as “extraterritoriality”, meaning that any land owned by the corp is sovereign territory only to the corp and immune to any laws of the country within. Corporate territory is not foreign soil but corporate soil, just like its employees are corporate citizens, though dual citizenship in a corporation and a nation is common.</p>
+            <p>The AAA corps, and numerous minor corporations, fight each other not only in the boardroom or with tricky deals, but with physical destruction, clandestine operations, hostile extraction or elimination of vital personnel, and other means of sabotage. Because no corporation wants to be held liable for damages, it has to be done by deniable assets: shadowrunners, invisible to the system where every citizen is tagged with a System Identification Number (SIN). They are outcasts, from the streets or disillusioned ex-corp/government/military personnel who threw off the shackles of corp society to achieve freedom. They chose or were forced to work in the shadows cast by the gigantic corporate buildings to support their living. Those that come from the corporations with the purpose of hiring and managing shadowrunners are often referred to as Mr. (Ms) Johnson by those they hire. Within the corporate architecture, Johnsons usually hold a management position of "special assets". Players of Shadowrun generally assume the role of the shadowrunners under this mysterious employ.</p>
+            <h3>AAA Megacorporations, The Big Ten (2077)</h3>
+            <ul>
+                <li>Ares Macrotechnology</li>
+                <li>Aztechnology</li>
+                <li>Evo Corporation</li>
+                <li>Horizon</li>
+                <li>Mitsuhama Computer Technologies</li>
+                <li>NeoNET</li>
+                <li>Renraku Computer Systems (レンラク)</li>
+                <li>Saeder-Krupp Heavy Industries</li>
+                <li>Shiawase Corporation (シアワセ)</li>
+                <li>Wuxing Incorporated</li>
+            </ul>
+            <h3>Former AAA Megacorporations</h3>
+            <ul>
+                <li>Fuchi Industrial Electronics (渕 or フチ)</li>
+                <li>Novatech</li>
+                <li>Cross Applied Technologies</li>
+                <li>Yamatetsu</li>
+            </ul>
+            <p>Shadowrunners are likely to have frequent contact with one non-AAA corporation, Lone Star Security Services. Lone Star is a corporation that has taken over majority of law enforcement services in the UCAS. Lone Star tends to avoid unprofitably dangerous areas such as the Seattle barrens (Puyallup and Redmond).</p>
+        </div>
+        <div id="Misc" class="MK_Desc">
+            <h2>Miscellaneous</h2>
             <p>Dracoforms, also known as Dragons are the various forms of large saurian creatures of tremendous intellect and magical power. What little we know of these great mythical beasts comes from the great dragon Dunkelzahn, whose famous 12-hour interview on January 27th, 2012 answered most of the world’s questions about dragons, the Awakening and magic in general. Dunkelzahn, however, was an enigma among dragons. Whereas most dragons are solitary creatures, more apt to see people and companies as ways to increase their wealth and/or power, the Big D was always in the public spotlight and led metahumanity through the dark years when magic first returned. Most dragons can take on a human form in order to fit into modern society.</p>
             <ul>
                 <li>Eastern Dragons</li>

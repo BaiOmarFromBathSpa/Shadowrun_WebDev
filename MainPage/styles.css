@@ -169,6 +169,7 @@ body {
         background: url(./Assets/Img/OtherStuff.jpg);
     }
     #InPageNav > button {
+
         background-size: cover;
         border: none;
         border: solid 1px var(--NeonColour);
@@ -190,14 +191,14 @@ body {
             border-radius: 0 !important;
             color: var(--NeonColourAfter) !important;
         }
-.MK_Descriptions {
+.MK_Desc {
     position: relative;
     background: rgb(20, 20, 20);
     color: orange;
     border-top: 0.5vh solid rgb(10,10,10);
     border-bottom: 0.5vh solid rgb(10,10,10);
 }
-    .MK_Descriptions > h2{
+    .MK_Desc > h2{
         --Height: 2.5vh;
         --PaddingBlock: 1vh;
         --BorderSize: 0.5vh;
@@ -214,4 +215,17 @@ body {
         background: rgb(15, 15, 15);
         border-top: var(--BorderSize) solid rgb(10,10,10);
         border-right: var(--BorderSize) solid rgb(10,10,10);
+    }
+    .MK_Desc > p,
+    .MK_Desc > ul,
+    .MK_Desc > h3 {
+        font-size: 1.3rem;
+        padding-left: 5vh;
+    }
+    .MK_Desc > ul {
+        font-size: 1.3rem;
+        margin-left: 5vh;
+    }
+    .MK_Desc > h3 {
+        text-decoration: underline;
     }
