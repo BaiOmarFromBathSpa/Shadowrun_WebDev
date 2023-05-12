@@ -178,7 +178,11 @@ body {
         0 0 4px 0 var(--NeonColour);
         border-radius: 10px;
         color: var(--NeonColour);
-        text-shadow: 0 0 1px grey;
+        text-shadow: 0 0 5px black;
+        
+        display: flex;
+        align-items: flex-end;
+        font-size: 18px;
     }
 
         .InPageNavSel,
@@ -218,7 +222,8 @@ body {
     }
     .MK_Desc > p,
     .MK_Desc > ul,
-    .MK_Desc > h3 {
+    .MK_Desc > h3,
+    .MK_Desc > a {
         font-size: 1.3rem;
         padding-left: 5vh;
     }
@@ -228,4 +233,14 @@ body {
     }
     .MK_Desc > h3 {
         text-decoration: underline;
+    }
+    .MK_Desc > a {
+        color: var(--NeonColourAfter);
+    }
+    .MK_Desc > iframe {
+        width: 70vw;
+        height: 55vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
