@@ -19,10 +19,13 @@ body {
     --NeonColourAfter: aqua;
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
+
 #StickyHeader {
         display: inline-flex;
-        position: sticky;
-        top: 0;
     
         font-size: 2.5vw;
         gap: 4vw;
@@ -57,11 +60,11 @@ body {
             #StickyHeader>a:hover,
             #StickyHeader>a:focus,
             #CurrPage {
-                color: var(--NeonColourAfter);
-                border-color: var(--NeonColourAfter);
-                box-shadow: inset 0 0 3.5vh, 0 0 3.5vh;
-                text-shadow: 0 0 4vh;
-                transform: translateY(-0.1rem);
+                color: var(--NeonColourAfter) !important;
+                border-color: var(--NeonColourAfter) !important;
+                box-shadow: inset 0 0 3.5vh, 0 0 3.5vh !important;
+                text-shadow: 0 0 4vh !important;
+                transform: translateY(-0.1rem) !important;
             }
     
         #StickyHeader::after {
@@ -99,9 +102,10 @@ body {
     1px -35px 0 60px rgb(69, 45, 15);
 }
     #BookPreview > img {
-        width: 20%;
+        width: 18%;
         height: 200px;
         margin-top: 30px;
+        margin-left: 1%;
         box-shadow: 1px 1px 5px black;
     }
     #BookPreview > p {
@@ -109,5 +113,14 @@ body {
         font-family: sans-serif;
         text-align: center;
         font-weight: bold;
-        padding-bottom: vh;
+        padding: 5vh;
+    }
+    #BookPreview > p > a {
+        text-decoration: none;
+        color: var(--NeonColour);
+    }
+    #BookPreview > p > a:hover,
+    #BookPreview > p > a:focus {
+        color: var(--NeonColourAfter);
+        text-shadow: 0 0 7px var(--NeonColourAfter);
     }
