@@ -83,7 +83,7 @@ header {
                 0 3px 3px 0 orange; 
         }
 
-#BookPreview{
+.BookPage, #BookPreview {
     background: rgb(229, 233, 220);
     height: fit-content;
     width: fit-content;
@@ -124,3 +124,9 @@ header {
         color: var(--NeonColourAfter);
         text-shadow: 0 0 7px var(--NeonColourAfter);
     }
+.BookPage{
+    
+}
+.BookCover{
+
+}
