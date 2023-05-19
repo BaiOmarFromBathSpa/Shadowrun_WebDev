@@ -124,9 +124,5 @@ header {
         color: var(--NeonColourAfter);
         text-shadow: 0 0 7px var(--NeonColourAfter);
     }
-.BookPage{
-    
-}
-.BookCover{
-
+.Frame {
 }
