@@ -1,0 +1,86 @@
+/* Contains Header and setup for body */
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+html {
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+body {
+    margin: 0;
+    position: relative;
+
+    background: rgb(10, 10, 10);
+    font-family: Tahoma;
+
+    overflow-x: hidden;
+
+    --NeonColour: orange;
+    --NeonColourAfter: aqua;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#StickyHeader {
+        display: inline-flex;
+    
+        font-size: 2.5vw;
+        gap: 4vw;
+        z-index: 100;
+    
+        width: 100%;
+        height: 10vh;
+        justify-content: center;
+        place-items: center;
+    
+        background: rgb(10, 10, 10);
+        isolation: isolate;
+    }
+    
+        #StickyHeader > a {
+            color: var(--NeonColour);
+            font-family: "Tilt Neon", cursive;
+    
+            display: block;
+            position: sticky;
+            top: 0;
+    
+            height: fit-content;
+            padding: 1.1vh;
+            padding-inline: 5vh;
+    
+            border: solid 0.6vh var(--NeonColour);
+            border-radius: 1.4vh;
+            box-shadow: inset 0 0 1.5vh var(--NeonColour), 0 0 1.5vh var(--NeonColour);
+            text-shadow: 0 0 2vh;
+        }
+    
+            #StickyHeader>a:hover,
+            #StickyHeader>a:focus,
+            #CurrPage {
+                color: var(--NeonColourAfter) !important;
+                border-color: var(--NeonColourAfter) !important;
+                box-shadow: inset 0 0 3.5vh, 0 0 3.5vh !important;
+                text-shadow: 0 0 4vh !important;
+                transform: translateY(-0.1rem) !important;
+            }
+    
+        #StickyHeader::after {
+            content: '';
+            position: absolute;
+        
+            width: inherit;
+            height: 5vh;
+            bottom: -0.65vh;
+            background: inherit;
+        
+            z-index: -1;
+            transform: skewY(0.4deg);
+        
+            box-shadow: 
+                0 3px 3px 0 orange; 
+        }

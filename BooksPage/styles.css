@@ -10,7 +10,7 @@ body {
     margin: 0;
     position: relative;
 
-    background: rgb(35, 35, 35, 85);
+    background: rgb(10, 10, 10);
     font-family: Tahoma;
 
     overflow-x: hidden;
@@ -22,6 +22,7 @@ body {
 header {
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 #StickyHeader {
@@ -130,7 +131,7 @@ header {
     width: 43vw;
     height: 50vh;
     margin: 30vh 0 10vh 40vw; /* Move everything together with these controls */
-    z-index: -1;
+    z-index: 0;
 
     overflow: wrap;
     color: gainsboro;
@@ -158,7 +159,7 @@ header {
         transform: rotate(5deg);
         outline: 2px solid var(--NeonColour);
     }
-        .Frame > img::after{
+        /* .Frame > img::after{
             content: '';
             display: block;
             position: absolute;
@@ -166,7 +167,41 @@ header {
             width: 50vw;
             aspect-ratio: 1/1;
             
-        }
+        } */
+
+footer {
+background: rgb(20, 20, 20);
+color: white;
+margin-inline: 10vw;
+width: 80vw;
+height: 7vh;
+border-radius: 1vw 1vw 0 0;
+}
+    footer > p {
+        padding-top: 2vh;
+        text-align: center;
+        font-size: large;
+    }
+
+#ImgBG {
+position: fixed;
+
+width: 100vw;
+height: auto;
+
+top: 0;
+left: 0;
+z-index: -10;
+
+filter: blur(5px);
+}
+
+section {
+    background: linear-gradient(rgb(35, 35, 35, 0) 0%, rgb(35, 35, 35) 95%, rgb(35, 35, 35) 100%);
+    overflow: hidden;
+    box-shadow: 0 150px rgb(35, 35, 35);
+}
+
 hr {
     margin-block: 5vh;
     width: 30vw;
