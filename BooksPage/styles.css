@@ -10,7 +10,7 @@ body {
     margin: 0;
     position: relative;
 
-    background: rgb(35, 35, 35);
+    background: rgb(35, 35, 35, 85);
     font-family: Tahoma;
 
     overflow-x: hidden;
@@ -130,23 +130,59 @@ header {
     width: 43vw;
     height: 50vh;
     margin: 30vh 0 10vh 40vw; /* Move everything together with these controls */
-    gap: 20px;
     z-index: -1;
 
+    overflow: wrap;
     color: gainsboro;
 }
-.Frame::before{
-    content: '';
-    position: absolute;
-    top: -19vh;
-    left: -5vw;
-    z-index: -2;
+    .Frame::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        top: -19vh;
+        left: -5vw;
+        z-index: -2;
 
-    width: 60vw;
-    aspect-ratio: 100/66;
-    background: url(./Assets/Img/ScreenFrame.png);
-    background-size: cover;
-}
+        width: 60vw;
+        aspect-ratio: 100/66;
+        background: url(./Assets/Img/ScreenFrame.png);
+        background-size: cover;
+    }
+    .Frame > img {
+        position: absolute;
+        width: 23vw;
+        height: auto;
+        top: -17vh;
+        left: -35vw;
+        transform: rotate(5deg);
+        outline: 2px solid var(--NeonColour);
+    }
+        .Frame > img::after{
+            content: '';
+            display: block;
+            position: absolute;
+            background: url(./Assets/Img/ImgFrame.png);
+            width: 50vw;
+            aspect-ratio: 1/1;
+            
+        }
 hr {
     margin-block: 5vh;
+    width: 30vw;
+    border-radius: 3px;
+    border: 3px solid var(--NeonColour);
+    box-shadow: 0 0 2vw var(--NeonColour),
+                -35vw 0 var(--NeonColourAfter),
+                -35vw 0 2vw var(--NeonColourAfter),
+                35vw 0 var(--NeonColourAfter),
+                35vw 0 2vw var(--NeonColourAfter);
+    border-inline: -1px solid;
+}
+
+a {
+    color: var(--NeonColour);
+}
+a:hover, a:focus {
+    color: var(--NeonColourAfter);
 }
