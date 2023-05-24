@@ -133,7 +133,6 @@ header {
     margin: 30vh 0 10vh 40vw; /* Move everything together with these controls */
     z-index: 0;
 
-    overflow: wrap;
     color: gainsboro;
 }
     .Frame::before{
@@ -159,15 +158,14 @@ header {
         transform: rotate(5deg);
         outline: 2px solid var(--NeonColour);
     }
-        /* .Frame > img::after{
-            content: '';
-            display: block;
+        .Frame > img::after{
+            content: "Yeah Man";
             position: absolute;
-            background: url(./Assets/Img/ImgFrame.png);
-            width: 50vw;
-            aspect-ratio: 1/1;
-            
-        } */
+            background: red;
+            width: 25vw;
+            height: 10vw;
+            z-index: 1000;
+        }
 
 footer {
 background: rgb(20, 20, 20);
