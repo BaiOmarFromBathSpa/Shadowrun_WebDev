@@ -134,6 +134,11 @@ header {
     z-index: 0;
 
     color: gainsboro;
+    --imgWidth: 23vw;
+    --AspectRatio: 10/14;
+    --topVal: -13vh;
+    --leftVal: -35vw;
+    --rotateImg: rotate(5deg);
 }
     .Frame::before{
         content: '';
@@ -150,23 +155,26 @@ header {
         background-size: cover;
     }
     .Frame > img {
+        display: block;
         position: absolute;
-        width: 23vw;
-        height: auto;
-        top: -17vh;
-        left: -35vw;
-        transform: rotate(5deg);
+        width: var(--imgWidth);
+        aspect-ratio: var(--AspectRatio);
+        top: var(--topVal);
+        left: var(--leftVal);
+        transform: var(--rotateImg);
         outline: 2px solid var(--NeonColour);
     }
-        .Frame > img::after{
-            content: "Yeah Man";
+         .Frame::after {  /*cant use img::before because of its position: absolute;*/
             position: absolute;
-            background: red;
-            width: 25vw;
-            height: 10vw;
-            z-index: 1000;
-        }
-
+            content: 'Ok';
+            background: url(./Assets/Img/ImgFrame.png);
+            width: calc(var(--imgWidth) + .5vw);
+            aspect-ratio: var(--AspectRatio);
+            top: var(--topVal);
+            left: var(--leftVal);
+            transform: var(--rotateImg);
+            z-index: 200;
+        } 
 footer {
 background: rgb(20, 20, 20);
 color: white;
