@@ -3,7 +3,6 @@
 
 html {
     box-sizing: border-box;
-    font-size: 1em;
 }
 
 body {
@@ -11,6 +10,7 @@ body {
     position: relative;
 
     background: rgb(10, 10, 10);
+    font-size: 1.35vw;
     font-family: Tahoma;
 
     overflow-x: hidden;
