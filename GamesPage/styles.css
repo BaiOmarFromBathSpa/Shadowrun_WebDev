@@ -197,8 +197,8 @@ header {
     .GamesBody > h3 {
         font-size: 135%;
     }
-    .GamesBody > .YTthumbs,
-    iframe {
+    
+    iframe, .GamesBody > .YTthumbs{
         position: absolute; 
         inset: 0;
         margin-block: auto;

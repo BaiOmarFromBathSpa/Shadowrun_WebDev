@@ -18,5 +18,5 @@ function HideThumb(ThumbNum) { //everytime its called...
     }
 
     YTframes[ThumbNum].src = YTlinks[ThumbNum]; //then hides thumbnail and loads Youtube video
-    YTframes[ThumbNum].style.zIndex = "1"; //then hides thumbnail and loads Youtube video
+    YTframes[ThumbNum].style.zIndex = "2"; //then hides thumbnail and loads Youtube video
 }   //This was done for performance reasons... loading 8 different iframes consumes too much resources
