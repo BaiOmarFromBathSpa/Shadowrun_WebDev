@@ -1,33 +1,41 @@
 /* Contains Header and setup for body */
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+:root {     
+    /* Variables used through the CSS */
+    --NeonColour: orange;
+    --NeonColourAfter: aqua;
+
+    --Height: 3.5vh;
+    --PaddingBlock: 1.6vh;
+    --BorderSize: 0.5vh;
+}
 
 html {
-    box-sizing: border-box;
-    font-size: 1em;
+
+    box-sizing: border-box; /* Box Sizing removes edges to give me a black slate*/
+    font-size: 1em; /* Seems to have no effect but im scared to touch it*/
 }
 
 body {
-    margin: 0;
-    position: relative;
+    margin: 0; /* the second step in achieving a black slate */
+    position: relative; /* to allow child elements to use position: absolute;*/
 
     background: rgb(35, 35, 35);
     font-family: Tahoma;
 
-    overflow-x: hidden;
-
-    --NeonColour: orange;
-    --NeonColourAfter: aqua;
+    overflow-x: hidden; /* to cut out overflows to the sides... therefore no side scrolling*/
 }
 
-.IntroHeader {
-    display: block;
+.IntroHeader { /* Header meant to be your first look at the entirety of the site*/
+    display: block; 
     position: relative;
-    width: 100%;
-    height: 90vh;
+    width: 100%; /* It starts off as a screen with a solid intro*/
+    height: 90vh; /* Doesnt cover the whole screen because i had to separate the nav*/
+                            /* Same effect tho, seamless even*/
 
     text-align: center;
 
-    color: orange;
+    color: orange;              /* v Gradient towards the top, Solid to Transparent allowing backgroud image to shine v   */
     background: linear-gradient(to top, rgb(10, 10, 10), rgb(10, 10, 10) 10%, rgba(10, 10, 10, 0));
     overflow: hidden;
 }
@@ -36,13 +44,13 @@ body {
         padding-inline: 20%;
         height: 60%;
         font-size: 1.5vw; 
-        /* 2.5vh */
+        /* 2.5vh < This was meant to be guidance if i attapted to adapt it for mobile*/
     }
 
     .IntroHeader > #HeaderBackdrop {
         position: absolute;
-        min-height: 100vh;
-        width: 100%;
+        min-height: 100vh; /* Backgound Image... without actually using background-img*/
+        width: 100%;            /*Allows me to utilise the gradient above*/
 
         left: 0;
         top: 0;
@@ -50,37 +58,36 @@ body {
     }
 
     .IntroHeader > #LogoFull {
-        padding-top: 5%;
+        padding-top: 5%; /*The logo in the middle*/
         height: 25%;
         width: auto;
     }
 
 #StickyHeader {
-    display: inline-flex;
+    display: inline-flex; /*Navigation element / Sticky Header*/
     position: sticky;
     top: 0;
 
     font-size: 2.5vw;
     gap: 4vw;
-    z-index: 100;
+    z-index: 100;   /* The rest of these are just to make it look as i wish them to*/
 
     width: 100%;
     height: 10vh;
-    justify-content: center;
+    justify-content: center; /* example centering on the x and y axis*/
     place-items: center;
 
     background: rgb(10, 10, 10);
-    isolation: isolate;
+    isolation: isolate;  /* Dont remeber what this does, must have been a fix i googled up */
 }
 
     #StickyHeader > a {
         color: var(--NeonColour);
-        font-family: "Tilt Neon", cursive;
+        font-family: "Tilt Neon", cursive;  /* Custom font - i hope google font never goes down */
 
         display: block;
-        position: sticky;
-        top: 0;
 
+            /* Turing the a element into a neon like effect */
         height: fit-content;
         padding: 1.1vh;
         padding-inline: 5vh;
@@ -93,15 +100,16 @@ body {
 
         #StickyHeader>a:hover,
         #StickyHeader>a:focus,
-        #CurrPage {
+        #CurrPage { /* Neon turns on and brigthens up if you hover over it, tab to it or youre on that page */
             color: var(--NeonColourAfter) !important;
             border-color: var(--NeonColourAfter) !important;
             box-shadow: inset 0 0 3.5vh, 0 0 3.5vh !important;
-            text-shadow: 0 0 4vh !important;
+            text-shadow: 0 0 4vh !important; /* it was failing to work so it's forced now :~ */
             transform: translateY(-0.1rem);
         }
 
-    #StickyHeader::after {
+    #StickyHeader::after { /* Notice how the Nav has a slight tilt,
+                                this psuedo element does that*/
         content: '';
         position: absolute;
     
@@ -117,7 +125,7 @@ body {
             0 3px 3px 0 orange; 
     }
 
-#HomeIntro {
+#HomeIntro { /* Contains context / Lead up to the Grid ahead*/
     text-align: center;
     color: gainsboro;
     background: rgb(20, 20, 20);
@@ -128,25 +136,27 @@ body {
     text-shadow: 
         0 0 5px black;
 }
-    #HomeIntro > h2 > span {
+    #HomeIntro > h2 > span { /*Used a span for once*/
         color: var(--NeonColour);
         text-shadow: 
         0 0 5px var(--NeonColour);
     }
 
-#InPageNav {
+#InPageNav { /*A grid of buttons, works like tabs tho - see JS*/
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(4,1fr);
     gap: 5px;
-    
+        /* Generated with: https://cssgrid-generator.netlify.app/ */
+        /* Although i fully understand the elements used trail and error
+            is quite tedious, and its easier to plan out through GUIs */
     width: 30vw;
     aspect-ratio: 1/1;
     margin: 1vw;
     margin-inline: 35vw;
 }
     #btnDragons{
-        grid-area: 1 / 1 / 3 / 3;
+        grid-area: 1 / 1 / 3 / 3; /* First two element decide origin and the last two the span*/
         background: url(./Assets/Img/WesternDragon.jpeg);
     }
     #btnRaces{
@@ -170,7 +180,7 @@ body {
         background: url(./Assets/Img/OtherStuff.jpg);
     }
     #InPageNav > button {
-
+        /* to avoid doing this individualy i used it on all buttons */
         background-size: cover;
         border: none;
         border: solid 1px var(--NeonColour);
@@ -181,14 +191,14 @@ body {
         color: var(--NeonColour);
         text-shadow: 0 0 5px black;
         
-        display: flex;
+        display: flex; /* Used flex to position the text within the buttons*/
         align-items: flex-end;
         font-size: 18px;
     }
 
         .InPageNavSel,
         #InPageNav > button:hover,
-        #InPageNav > button:focus{
+        #InPageNav > button:focus{ /* Same concet as the main nav */
             border: solid 1px var(--NeonColourAfter) !important;
             box-shadow: 
             inset 0 0 5px var(--NeonColourAfter),
@@ -196,18 +206,15 @@ body {
             border-radius: 0 !important;
             color: var(--NeonColourAfter) !important;
         }
-.MK_Desc {
+.MK_Desc {  /* The bodies of text the buttons switch*/
     position: relative;
     background: rgb(20, 20, 20);
     color: orange;
     border-top: 0.5vh solid rgb(10,10,10);
     border-bottom: 0.5vh solid rgb(10,10,10);
 }
-    .MK_Desc > h2{
-        --Height: 3.5vh;
-        --PaddingBlock: 1.6vh;
-        --BorderSize: 0.5vh;
-        
+    .MK_Desc > h2{  /* A little math was used here to make the size of the heading adjustable */
+            /* Works as you would expect a real heading to, except extruded from the body of text */
         position: absolute;
         background: rgb(20, 20, 20);
         width: fit-content;
@@ -225,11 +232,10 @@ body {
     .MK_Desc > ul,
     .MK_Desc > h3,
     .MK_Desc > a {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Universal for all elements*/
         padding-left: 5vh;
     }
     .MK_Desc > ul {
-        font-size: 1.3rem;
         margin-left: 5vh;
     }
     .MK_Desc > h3 {
@@ -240,7 +246,7 @@ body {
     }
     .MK_Desc > iframe {
         width: 70vw;
-        height: 55vh;
+        height: 55vh;   /* The specifics -  Used i frame in one of them */
         display: block;
         margin-left: auto;
         margin-right: auto;
