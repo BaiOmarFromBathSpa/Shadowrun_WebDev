@@ -97,9 +97,9 @@ header {
 
 .BookPage, #BookPreview {
     background: rgb(229, 233, 220);
-    height: fit-content;
+    height: fit-content; /* Decided to let the book take as much space as it needed... can cause strething sometimes */
     width: fit-content;
-    box-shadow:
+    box-shadow:        /* The Book effect used here just used ulternationg solid white and shadowy gray */     
     -3px -3px 5px 7px gray,
     0 -7px 0 10px rgb(229, 233, 220),
     3px -5px 5px 10px gray,
@@ -111,10 +111,10 @@ header {
     3px -26px 5px 40px gray,
     0 -35px 0 50px rgb(229, 233, 220),
     0 -40px 0 60px rgb(97, 64, 21),
-    1px -35px 0 60px rgb(69, 45, 15);
+    1px -35px 0 60px rgb(69, 45, 15); /* Excluding the cover which was brown for aestetic purposes */
 }
     #BookPreview > img {
-        width: 18%;
+        width: 18%;         /* All images withing the book have a set width allowance and a set height */
         height: 200px;
         margin-top: 30px;
         margin-left: 1%;
@@ -122,13 +122,13 @@ header {
     }
     #BookPreview > p {
         font-size: 250%;
-        font-family: sans-serif;
+        font-family: sans-serif; /* Hadnt planned to link through the page but use a paragraph instead */
         text-align: center;
         font-weight: bold;
         padding: 5vh;
     }
     #BookPreview > p > a {
-        text-decoration: none;
+        text-decoration: none; /* But then i got advised it may be wise to try to stay consistent with styling */
         color: var(--NeonColour);
     }
     #BookPreview > p > a:hover,
@@ -142,15 +142,16 @@ header {
     height: 50vh;
     margin: 30vh 0 10vh 40vw; /* Move everything together with these controls */
     z-index: 0;
-
+    /* If i had used more divs the frames would have worked more seamlessly but i decided to challage myself with html restrictions */
     color: gainsboro;
 }
     .Frame::before{
-        content: '';
+        content: ''; /* ...so i used this for the Frame i used */
+                    /* PS i apalogise for the Text Frames i am not good with image editing*/
         position: absolute;
         inset: 0;
         margin: auto;
-        top: -19vh;
+        top: -19vh; /* Really specific to achive something i could be proud of*/
         left: -5vw;
         z-index: -2;
 
@@ -170,7 +171,7 @@ header {
         outline: 2px solid var(--NeonColour);
         /* border-bottom-left-radius: 20px; */
     }
-        /*cant use img::before because of its position: absolute;*/            
+        /*cant use img::before because of its position: absolute;     <--Read-Me- */            
          /* .Frame::after {  
             position: absolute;
             content: '';
@@ -189,7 +190,7 @@ header {
 
 footer {
 background: rgb(20, 20, 20);
-color: white;
+color: white;   /* Creddditttts */
 margin-inline: 10vw;
 width: 80vw;
 height: 7vh;
@@ -202,8 +203,9 @@ border-radius: 1vw 1vw 0 0;
     }
 
 #ImgBG {
-position: fixed;
-
+position: fixed;    /* This trick uses a fixed image that spans the whole page */
+            /* Then the image is pushed to the backgroud, from then on i could
+             experiment with transparent background in the foreground elements*/
 width: 100vw;
 height: auto;
 
@@ -216,17 +218,17 @@ filter: blur(5px);
 
 section {
     background: linear-gradient(rgb(35, 35, 35, 0) 0%, rgb(35, 35, 35) 95%, rgb(35, 35, 35) 100%);
-    overflow: hidden;
+    overflow: hidden;   /* ...For example this one goes from clear up top to translucent as the image goes down */
     box-shadow: 0 150px rgb(35, 35, 35);
 }
 
-hr {
+hr {    /* HR is usually just a line through, decided neon lights would work better */
     margin-block: 5vh;
-    width: 30vw;
+    width: 30vw; /* 30 percent the width of the screen for each of the three neon lights*/
     border-radius: 3px;
     border: 3px solid var(--NeonColour);
-    box-shadow: 0 0 2vw var(--NeonColour),
-                -35vw 0 var(--NeonColourAfter),
+    box-shadow: 0 0 2vw var(--NeonColour), /* box shadow was used to achive the separated lights */
+                -35vw 0 var(--NeonColourAfter), /* Hue change animation may have livened  them up a bit more */
                 -35vw 0 2vw var(--NeonColourAfter),
                 35vw 0 var(--NeonColourAfter),
                 35vw 0 2vw var(--NeonColourAfter);

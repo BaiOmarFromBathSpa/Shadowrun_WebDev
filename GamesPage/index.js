@@ -2,8 +2,8 @@ console.log("JS C0nnected")
 
 let YTthumbs = document.getElementsByClassName("YTthumbs")
 let YTframes = document.getElementsByClassName("YTframes")
-const YTlinks = ["https://www.youtube.com/embed/alzFFjJ3xO0",
-              "https://www.youtube.com/embed/2uz5XcKWtBM",
+const YTlinks = ["https://www.youtube.com/embed/alzFFjJ3xO0", /* the embed sources are stored in the js and called upon when needed */
+              "https://www.youtube.com/embed/2uz5XcKWtBM",  
               "https://www.youtube.com/embed/EtXTwr69DtI",
               "https://www.youtube.com/embed/CtvReO8AUQg",
               "https://www.youtube.com/embed/DPBW_MFqeRs", 
@@ -20,3 +20,5 @@ function HideThumb(ThumbNum) { //everytime its called...
     YTframes[ThumbNum].src = YTlinks[ThumbNum]; //then hides thumbnail and loads Youtube video
     YTframes[ThumbNum].style.zIndex = "3"; //then hides thumbnail and loads Youtube video
 }   //This was done for performance reasons... loading 8 different iframes consumes too much resources
+
+/* I found an alternate method to achive this but the code was too advanced to copy off, also thought i could do it in less */ 
