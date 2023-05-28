@@ -1,6 +1,17 @@
 /* Contains Header and setup for body */
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 
+:root {
+    --NeonColour: orange;
+    --NeonColourAfter: aqua;
+
+    --imgWidth: 23vw;
+    --AspectRatio: 10/14;
+    --topVal: -13vh;
+    --leftVal: -35vw;
+    --rotateImg: rotate(5deg);
+}
+
 html {
     box-sizing: border-box;
 }
@@ -15,8 +26,7 @@ body {
 
     overflow-x: hidden;
 
-    --NeonColour: orange;
-    --NeonColourAfter: aqua;
+    
 }
 
 header {
@@ -126,7 +136,7 @@ header {
         color: var(--NeonColourAfter);
         text-shadow: 0 0 7px var(--NeonColourAfter);
     }
-.Frame {
+.Frame{
     position: relative;
     width: 43vw;
     height: 50vh;
@@ -134,11 +144,6 @@ header {
     z-index: 0;
 
     color: gainsboro;
-    --imgWidth: 23vw;
-    --AspectRatio: 10/14;
-    --topVal: -13vh;
-    --leftVal: -35vw;
-    --rotateImg: rotate(5deg);
 }
     .Frame::before{
         content: '';
@@ -163,18 +168,25 @@ header {
         left: var(--leftVal);
         transform: var(--rotateImg);
         outline: 2px solid var(--NeonColour);
+        /* border-bottom-left-radius: 20px; */
     }
-         .Frame::after {  /*cant use img::before because of its position: absolute;*/
+        /*cant use img::before because of its position: absolute;*/            
+         /* .Frame::after {  
             position: absolute;
-            content: 'Ok';
+            content: '';
             background: url(./Assets/Img/ImgFrame.png);
-            width: calc(var(--imgWidth) + .5vw);
+            width: calc(var(--imgWidth) + 25px);
             aspect-ratio: var(--AspectRatio);
-            top: var(--topVal);
-            left: var(--leftVal);
+            top: calc(var(--topVal) - 6px);
+            left: calc(var(--leftVal) - 20px);
             transform: var(--rotateImg);
-            z-index: 200;
-        } 
+            background-repeat: no-repeat;
+        }
+        .Frame:nth-of-type(even)::after {
+            transform: rotate(-5deg);
+            left: calc(63vw - 18px);
+        } */
+
 footer {
 background: rgb(20, 20, 20);
 color: white;
