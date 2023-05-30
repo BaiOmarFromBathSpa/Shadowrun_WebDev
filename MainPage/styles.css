@@ -150,10 +150,9 @@ body {
         /* Generated with: https://cssgrid-generator.netlify.app/ */
         /* Although i fully understand the elements used trail and error
             is quite tedious, and its easier to plan out through GUIs */
-    width: 30vw;
     aspect-ratio: 1/1;
     margin: 1vw;
-    margin-inline: 35vw;
+    margin-inline: 30vw;
 }
     #btnDragons{
         grid-area: 1 / 1 / 3 / 3; /* First two element decide origin and the last two the span*/
@@ -251,3 +250,25 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+
+#Sigil {
+    position: fixed; /* Found this through experimentation, animations are fun. Wish i used them more */
+    right: 0;
+    bottom: 0;
+    width: 7vw;
+    margin: 1vw;
+    height: auto;
+    z-index: 1000;
+    
+    animation: sigilHue 30s;  /* The whole animations plays for 30s and then back to red then loops */
+    animation-iteration-count: infinite;
+}
+
+@keyframes sigilHue {
+    from {
+        filter: hue-rotate(0deg); /* Starts from red normal */
+    }
+    to {
+        filter: hue-rotate(360deg); /* and explores the colour wheel*/
+    }
+}

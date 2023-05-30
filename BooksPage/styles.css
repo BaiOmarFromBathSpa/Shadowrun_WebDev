@@ -241,3 +241,25 @@ a {
 a:hover, a:focus {
     color: var(--NeonColourAfter);
 }
+
+#Sigil {
+    position: fixed; /* Found this through experimentation, animations are fun. Wish i used them more */
+    right: 0;
+    bottom: 0;
+    width: 7vw;
+    margin: 1vw;
+    height: auto;
+    z-index: 1000;
+    
+    animation: sigilHue 30s;  /* The whole animations plays for 30s and then back to red then loops */
+    animation-iteration-count: infinite;
+}
+
+@keyframes sigilHue {
+    from {
+        filter: hue-rotate(0deg); /* Starts from red normal */
+    }
+    to {
+        filter: hue-rotate(360deg); /* and explores the colour wheel*/
+    }
+}

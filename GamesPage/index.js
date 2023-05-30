@@ -22,3 +22,17 @@ function HideThumb(ThumbNum) { //everytime its called...
 }   //This was done for performance reasons... loading 8 different iframes consumes too much resources
 
 /* I found an alternate method to achive this but the code was too advanced to copy off, also thought i could do it in less */ 
+
+const Music = document.getElementById("BGmusic");
+let MusicPlaying = false;
+PlayMusic();
+
+function PlayMusic() {
+    if (MusicPlaying != true) { //If music isn't playing...
+        Music.play();
+        MusicPlaying = true;
+    } else {                       ///...if is playing
+        Music.pause();
+        MusicPlaying = false;
+    }
+}

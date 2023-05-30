@@ -1,4 +1,7 @@
 console.log("JS C0nnected"); // pls ignore i find it fun
+let Music = document.getElementById("BGmusic");
+let MusicPlaying = true;
+
 SwitchDesc("Dragons") //Starts with Dragons, can swtch it tho
 
 function SwitchDesc(NewDesc) {
@@ -22,3 +25,13 @@ function SwitchDesc(NewDesc) {
     }
     document.getElementById(btnNewDesc).classList.add("InPageNavSel");
   }
+
+function PlayMusic() {
+    if (MusicPlaying != true) { //If music isn't playing...
+        Music.play();
+        MusicPlaying = true;
+    } else {                       ///...if is playing
+        Music.pause();
+        MusicPlaying = false;
+    }
+}
